@@ -1,4 +1,4 @@
-package com.eshraq.gosport;
+package com.eshraq.gosport.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.eshraq.gosport.R;
 
 public class SplashActivity extends Activity{
 
