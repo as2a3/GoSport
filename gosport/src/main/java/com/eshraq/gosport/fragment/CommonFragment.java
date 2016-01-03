@@ -84,7 +84,7 @@ public class CommonFragment extends Fragment{
         if (restAdapter == null) {
             restAdapter = new RestAdapter.Builder()
                     // TODO: replace from config
-                    .setEndpoint("common prefix api")
+                    .setEndpoint("http://ishraq_content.net23.net")
                     .setLogLevel(RestAdapter.LogLevel.FULL)
                     .setRequestInterceptor(new RequestInterceptor() {
                         @Override

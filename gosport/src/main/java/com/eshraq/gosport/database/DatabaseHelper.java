@@ -7,9 +7,7 @@ import android.util.Log;
 import com.eshraq.gosport.TareekhApplication;
 import com.eshraq.gosport.model.Article;
 import com.eshraq.gosport.model.Category;
-import com.eshraq.gosport.model.Comment;
 import com.eshraq.gosport.model.Settings;
-import com.eshraq.gosport.model.User;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.support.ConnectionSource;
@@ -28,8 +26,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private Dao<Settings, Integer> settingsDao = null;
     private Dao<Category, Integer> categoryDao = null;
     private Dao<Article, Integer> articleDao = null;
-    private Dao<User, Integer> userDao = null;
-    private Dao<Comment, Integer> commentDao = null;
 
 
     // we do this so there is only one helper
@@ -65,8 +61,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
             Log.i(TareekhApplication.LOG_TAG, "onCreate");
             TableUtils.createTable(connectionSource, Article.class);
             TableUtils.createTable(connectionSource, Category.class);
-            TableUtils.createTable(connectionSource, User.class);
-            TableUtils.createTable(connectionSource, Comment.class);
             TableUtils.createTable(connectionSource, Settings.class);
 
             initData();
@@ -130,26 +124,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         return articleDao;
     }
 
-    public Dao<User, Integer> getUserDao() {
-        if (userDao == null) {
-            try {
-                userDao = getDao(User.class);
-            } catch (SQLException e) {
-            }
-        }
-        return userDao;
-    }
-
-    public Dao<Comment, Integer> getIngredientDao() {
-        if (commentDao == null) {
-            try {
-                commentDao = getDao(Comment.class);
-            } catch (SQLException e) {
-            }
-        }
-        return commentDao;
-    }
-
 
     /**
      * Close the database connections and clear any cached DAOs.
@@ -161,7 +135,5 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         categoryDao = null;
         settingsDao = null;
         articleDao = null;
-        userDao = null;
-        commentDao = null;
     }
 }

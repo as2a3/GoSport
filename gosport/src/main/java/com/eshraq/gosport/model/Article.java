@@ -21,9 +21,6 @@ public class Article {
     @DatabaseField(columnName = "likes")
     private Integer likes;
 
-    @DatabaseField(foreign = true, foreignAutoRefresh = true, columnName = "author_id")
-    private User author;
-
     @DatabaseField(foreign = true, foreignAutoRefresh = true, columnName = "category_id")
     private Category category;
 
@@ -61,14 +58,6 @@ public class Article {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public User getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(User author) {
-        this.author = author;
     }
 
     public Category getCategory() {

@@ -1,8 +1,23 @@
 <resources>
-    <string name="app_name">Go Sport</string>
+    <string name="app_name">يالاكورة</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="ads_admob_banner_mediation_id">ca-app-pub-934105sd9935057183/472335194055</string>
+
+    <string name="tab_last_news">الأخبار</string>
+    <string name="tab_categories">التصنيفات</string>
+    <string name="tab_notification">الاشعارات</string>
+
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="tabs_title">
+        <item>الأخبار</item>
+        <item>التصنيفات</item>
+        <item>الاشعارات</item>
+    </string-array>
+
 </resources>
